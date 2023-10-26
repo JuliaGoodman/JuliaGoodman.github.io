@@ -6,6 +6,7 @@ body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color:rgb(120, 13, 13);
 }
+
 nav{
     height: 50vh;
     display:flex;
@@ -14,6 +15,7 @@ nav{
     height:20px;
     background-color: lightsalmon;
 }
+
 nav a{
     width:10vw;
     text-align: center;
@@ -21,7 +23,6 @@ nav a{
     color:rgb(232, 202, 80);
     transition: transform 0.3s ease;
     }
-    
     
 nav a:hover {
     transform: scale(1.4);
