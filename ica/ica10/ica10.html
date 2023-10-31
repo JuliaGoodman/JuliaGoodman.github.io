@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        Button, div {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 2px solid rgba(0, 0, 0, 0.6);
+            background-color: pink;
+            color: rgb(100 0 0 / 1);
+            box-shadow: 20px 20px 20px rgba(112, 112, 117, 0.4);
+            border-radius: 10px;
+            padding: 3px 10px;
+            cursor: pointer;
+            height: 200px;
+            width: 500px;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <button type="button">Favorite color?</button>
+    <button id="press" type="button">????</button>
+
+    <script>
+        const button = document.querySelector("button");
+        const press = document.getElementById("press");
+
+        button.addEventListener('click', updateName );
+       // press.addEventListener('click', updateName );
+
+        function updateName() {
+            let name = prompt ("Enter your favorite color!");
+            console.log("The function ran correctly");
+            console.log(name);
+            button.textContent = `Favorite color: ${name}`;
+            press.innerHTML = "<h1>YAY</h1>"
+        }
+    </script>
+</body>
+</html>
