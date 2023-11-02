@@ -1,8 +1,6 @@
 body {
     background-color: rgb(255, 194, 237);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: grid;
-    grid-row: auto;
     padding: 2em;
     width:30vw;
     text-decoration: none;
@@ -10,11 +8,10 @@ body {
     width: 90%;
     top: 0%;
     bottom: auto;
-    left: 0%;
-    right: 50%;
-    transition: transform 0.3s ease;
     font-size: x-large;
     font-weight: bold;
+    align-content: center;
+    margin: auto;
 }
 
 button {
