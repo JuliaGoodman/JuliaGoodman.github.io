@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function draw () {
   //  console.log ("TEST");
   ctx.clearRect(0,0, canvas.width, canvas.height);
-  for (let i = 0; i < 100; i ++) {
+  for (let i = 0; i < 10000; i ++) {
     ctx.beginPath();
     let red = random (255);
     let green = random (255);
