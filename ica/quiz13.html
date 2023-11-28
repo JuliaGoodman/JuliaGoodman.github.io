@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>JSON: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+    let motherInfo = 'The mother cats are called ';
+    let kittenInfo;
+    const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
+
+    fetch(requestURL)
+    .then(response => response.text())
+    .then(text => displayCatInfo(text))
+
+    function displayCatInfo(catString) {
+      let total = 0;
+      let male = 0;
+
+      // Add your code here
+function displayCatInfo() {
+  var catString = '{"cats":[{"name":"Whiskers","kittens":[{"name":"Fluffy","gender":"female"},{"name":"Mittens","gender":"male"},{"name":"Snowball","gender":"female"}]},{"name":"Smokey","kittens":[{"name":"Shadow","gender":"male"},{"name":"Salem","gender":"female"}]},{"name":"Tiger","kittens":[{"name":"Leo","gender":"male"},{"name":"Lily","gender":"female"},{"name":"Max","gender":"male"}]}]}';
+
+  var catsData = JSON.parse(catString);
+  var motherInfo = '';
+  var totalKittens = 0;
+  var maleKittens = 0;
+  var femaleKittens = 0;
+
+  for (var i = 0; i < catsData.cats.length; i++) {
+    motherInfo += catsData.cats[i].name;
+
+    if (i < catsData.cats.length - 1) {
+      motherInfo += ', ';
+    } else {
+      motherInfo += ' and ';
+    }
+
+    for (var j = 0; j < catsData.cats[i].kittens.length; j++) {
+      totalKittens++;
+      if (catsData.cats[i].kittens[j].gender === 'male') {
+        maleKittens++;
+      } else {
+        femaleKittens++;
+      }
+    }
+  }
+
+  motherInfo += '.';
+
+  var kittenInfo = 'There are ' + totalKittens + ' kittens, out of which ' + maleKittens + ' are male and ' + femaleKittens + ' are female.';
+
+  var para1 = document.getElementById('mother-info');
+  var para2 = document.getElementById('kitten-info');
+  para1.textContent = motherInfo;
+  para2.textContent = kittenInfo;
+}
+
+displayCatInfo();
+      // Don't edit the code below here!
+
+      para1.textContent = motherInfo;
+      para2.textContent = kittenInfo;
+    }
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</html>
