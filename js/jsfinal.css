@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(211, 164, 255);
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+#final-button {
+    background-color: white;
+    width: 12%;
+    
+}

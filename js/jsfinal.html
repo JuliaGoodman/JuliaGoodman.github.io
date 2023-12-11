@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="jsfinal.css" />
+    <script defer src="jsfinal.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="slidecontainer">
+        <p>Please select the first 3 digits of your phone number</p>
+        <input type="range" min="100" max="999" class="slider" id="myRange" />
+        <input
+          class="slider-submit-button"
+          type="button"
+          name="slider-submit-button"
+          value="SUBMIT"
+        />
+        <p class="slider-output"></p>
+      </div>
+    </div>
+    <div>
+        <div class="slidecontainer">
+          <p>Please select the next 3 digits of your phone number</p>
+          <input type="range" min="100" max="999" class="slider" id="myRange2" />
+          <input
+            class="slider-submit-button2"
+            type="button"
+            name="slider-submit-button2"
+            value="SUBMIT"
+          />
+          <p class="slider-output2"></p>
+        </div>
+      </div>
+    <div>
+        <div>
+            <div class="slidecontainer">
+              <p>Please select the last 4 digits of your phone number</p>
+              <input type="range" min="1000" max="9999" class="slider" id="myRange3" />
+              <input
+                class="slider-submit-button3"
+                type="button"
+                name="slider-submit-button3"
+                value="SUBMIT" />
+              <p class="slider-output3"></p>
+            </div>
+          </div>
+    </div>
+    <div>
+      <button type="button" id="final-button" class="button"></button>
+    </div>
+  </body>
+</html>
