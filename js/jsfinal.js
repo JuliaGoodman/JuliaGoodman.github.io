@@ -1,11 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var firstBoxChecked = false;
-  var secondBoxChecked = false;
-  var thirdBoxChecked = false;
+var firstBoxChecked = false;
+var secondBoxChecked = false;
+var thirdBoxChecked = false;
+var firstDigits = 0;
+var nextDigits = 0;
+var lastDigits = 0;
 
-  var firstDigits = 0;
-  var nextDigits = 0;
-  var lastDigits = 0;
+document.addEventListener("DOMContentLoaded", function () {
+
 
   var slider = document.getElementById("myRange");
   var sliderSubmit = document
@@ -69,34 +70,44 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateSelectedNumbers() {
-    selectedNumbersDiv.textContent = `Your Phone Number: ${firstDigits}-${nextDigits}-${lastDigits}`;
+    selectedNumbersDiv.textContent = `${firstDigits}-${nextDigits}-${lastDigits}`;
   }
 
   function submitFinal() {
     if (firstBoxChecked && secondBoxChecked && thirdBoxChecked) {
+      console.log(selectedNumbersDiv.textContent);
+      alert(`Submitted Numbers: ${firstDigits}-${nextDigits}-${lastDigits}`);
       resetNumbers();
     } else {
       alert("Please select all three parts of your phone number first.");
     }
   }
 
-  function resetNumbers() {
-    firstBoxChecked = false;
-    secondBoxChecked = false;
-    thirdBoxChecked = false;
+    var finalButton = document.getElementById("final-button");
 
-    firstDigits = 0;
-    nextDigits = 0;
-    lastDigits = 0;
+    var clearButton = document.getElementById("clearButton");
+    clearButton.addEventListener("click", () => {
+      resetNumbers();
+    });
 
-    slider.value = 0;
-    slider2.value = 0;
-    slider3.value = 0;
-
-    sliderOutput.textContent = "Selected: ";
-    sliderOutput2.textContent = "Selected: ";
-    sliderOutput3.textContent = "Selected: ";
-
-    selectedNumbersDiv.textContent = "";
-  }
+    function resetNumbers() {
+      finalButton.textContent = "Submit Number";
+      firstBoxChecked = false;
+      secondBoxChecked = false;
+      thirdBoxChecked = false;
+  
+      firstDigits = 0;
+      nextDigits = 0;
+      lastDigits = 0;
+  
+      slider.value = 0;
+      slider2.value = 0;
+      slider3.value = 0;
+  
+      sliderOutput.textContent = "Selected: ";
+      sliderOutput2.textContent = "Selected: ";
+      sliderOutput3.textContent = "Selected: ";
+  
+      selectedNumbersDiv.textContent = "";
+    }
 });

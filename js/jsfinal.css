@@ -1,12 +1,50 @@
 body {
-    background-color: rgb(211, 164, 255);
+    background-image: linear-gradient(to bottom right, purple, pink);
+    background-attachment: fixed;
     font-size: x-large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
 
-#final-button {
-    background-color: white;
-    width: 12%;
-    
+.slidecontainer {
+    width: 50%;
+    margin: auto;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.slider-submit-button,
+.slider-submit-button2,
+.slider-submit-button3,
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #3498db;
+    margin-right: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.slider-submit-button:hover,
+.slider-submit-button2:hover,
+.slider-submit-button3:hover,
+.button:hover {
+    background-color: hsl(311, 64%, 44%);
+    border-color: hsl(311, 64%, 44%);
+}
+
+.slider-submit-button:active,
+.slider-submit-button2:active,
+.slider-submit-button3:active,
+.button:active {
+    background-color: #3498db;
+    border-color: #3498db;
 }
